@@ -1,0 +1,54 @@
+<div class="container">
+    <header class="header">
+      <!---BANNER--->
+      <section class="headerBanner">
+        <h2>TITLE</h2>
+        
+        <div class="headerButtons"
+          [ngStyle]="{
+            'background-image': 'linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.3))'
+          }">
+         <button class="play-button">
+            <mat-icon>arrow_right</mat-icon>
+            <span>Play</span>
+          </button>
+  
+          <button class="more-button">
+           <mat-icon>info</mat-icon>
+            <span>More Info</span>
+          </button>
+        </div>
+      </section> <!---BANNER ends--->
+  
+      <!---MAIN--->
+      <main class="headerMain" id="stickyHeader" [class.sticky]="sticky" #stickHeader>
+        <!--STICKYHEADER is for keeping the header of a website in the same place on the screen while the user scrolls down the page-->
+       
+        <aside class="headerLeft">
+          <a routerLink="/">
+          <img src="../assets/netflix.svg" alt="logo">
+          </a>
+          <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">TV Shows</a></li>
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">News & Popular</a></li>
+            <li><a href="#">My List</a></li>
+          </ul>
+        </aside>
+  
+        <aside class="headerRight">
+          <ul>
+            <li><a href="#"><mat-icon>search</mat-icon></a></li>
+            <li><a href="#"><mat-icon>notifications</mat-icon></a></li>
+            <li><img src="../assets/avatar.png" alt="avatar" 
+              [ngStyle]="{
+                'width' : '40px'
+              }"></li>
+          </ul>
+  
+        </aside>
+      </main> <!---MAIN ends--->
+    </header>
+  
+  </div>

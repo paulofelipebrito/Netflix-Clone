@@ -1,0 +1,33 @@
+import { AppComponent } from './../../../app.component';
+import { SliderComponent } from './../slider/slider.component';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { Movies } from 'src/app/models/movies';
+
+@Component({
+  selector: 'app-body',
+  templateUrl: './body.component.html',
+  styleUrls: ['./body.component.scss']
+})
+export class BodyComponent implements OnInit {
+
+  @Input() sliderConfig: any;
+  @Input() movies!: Movies;
+  @Input() title: string = "";
+
+  trending!: Movies;
+  popular!: Movies;
+  topRated!: Movies;
+  originals!: Movies;
+  nowPlaying!: Movies;
+
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+  getTrending(){
+    
+  }
+
+}

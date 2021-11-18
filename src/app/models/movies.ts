@@ -1,46 +1,27 @@
-export interface Weather {
-    coord: Coord;
-    weather?: (WeatherEntity)[] | null;
-    base: string;
-    main: Main;
-    wind: Wind;
-    clouds: Clouds;
-    dt: number;
-    sys: Sys;
-    id: number;
-    name: string;
-    cod: number;
-  }
-  export interface Coord {
-    lon: number;
-    lat: number;
-  }
-  export interface WeatherEntity {
-    id: number;
-    main: string;
-    description: string;
-    icon: string;
-  }
-  export interface Main {
-    temp: number;
-    pressure: number;
-    humidity: number;
-    temp_min: number;
-    temp_max: number;
-  }
-  export interface Wind {
-    speed: number;
-    deg: number;
-  }
-  export interface Clouds {
-    all: number;
-  }
-  export interface Sys {
-    type: number;
-    id: number;
-    message: number;
-    country: string;
-    sunrise: number;
-    sunset: number;
-  }
-  
+export interface Movies {
+  results?: (ResultsEntity)[] | null;
+  page: number;
+  total_results: number;
+  dates: Dates;
+  total_pages: number;
+}
+export interface ResultsEntity {
+  popularity: number;
+  vote_count: number;
+  video: boolean;
+  poster_path: string;
+  id: number;
+  adult: boolean;
+  backdrop_path: string;
+  original_language: string;
+  original_title: string;
+  genre_ids?: (number)[] | null;
+  title: string;
+  vote_average: number;
+  overview: string;
+  release_date: string;
+}
+export interface Dates {
+  maximum: string;
+  minimum: string;
+}
